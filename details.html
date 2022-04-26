@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <link type="text/css" href="CSS/main.css" rel="stylesheet" />
+
+    <title>Order Details</title>
+
+    <meta charset="utf-8" />
+
+    <style>
+        body {
+            font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            font-size: 1em;
+            align-content: center;
+        }
+
+
+        label {
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+            padding-right: 10px;
+            font-weight: bold;
+        }
+
+        button {
+            font-size: 1.25em;
+            border-radius: 1.5rem;
+            height: 2em;
+            width: 150px;
+            padding: 0.25em;
+            margin-left: 110px;
+            border: 2px solid hsl(60, 43%, 87%);
+            background-color: rgb(251, 172, 152);
+            color: rgb(227, 231, 192);
+            /* text */
+
+        }
+        button:hover {
+            background-color: rgb(202, 177, 230);
+            color: rgb(240, 239, 240);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <form action="">
+
+        <fieldset id="container">
+
+            <div>
+
+                <h2 style="color: rgb(222, 241, 203)">Order Details</h2>
+
+
+                <div>
+
+                    <h4>Enter Order Details </h4>
+
+                    <label for="name">Name:</label>
+
+                    <input  type="text" name="name" id="name" /><br />
+
+                    <label for="name">Phone:</label>
+
+                    <input type="text" name="phone" id="name" placeholder="+2547..." /><br />
+
+                    <label for="name">E-Mail:</label>
+
+                    <input type="email" name="email" id="email" 
+                        placeholder="joe@gmail.com" /><br />
+
+                    <label for="qty">Quantity:</label>
+
+                    <input type="number" name="qty" id="qty" min="1" max="20"
+                        value="2" /><br />
+
+                    <div id="extras">
+
+
+                        <input class="check2" type="radio" name="delivery" id="delivery" value="Yes" />
+
+                        <label for="delivery">Delivery in 24 hrs @ $50</label>
+                        <br>
+                        <input class="check2" type="radio" name="delivery" id="delivery" value="Yes" />
+
+                        <label for="delivery">Pick up from Store</label>
+
+                    </div>
+
+                    <!-- event listen -->
+                    <a href="index.html">
+                        <button type="button" onclick="OpenCart()">Place Order</button>
+
+                    </a>
+
+                    <button type="submit" ()">Reset</button>
+
+                </div>
+
+
+            </div>
+
+            <script>
+                function OpenCart() {
+                    const cart = document.querySelector('.producstOnCart');
+                    cart.classList.toggle('show');
+                    document.querySelector('body').classList.toggle('stopScrolling')
+                }
+            </script>
+
+            <script src="JS/script.js"></script>
+
+    </form>
+
+</body>
+
+</html>
